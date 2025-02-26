@@ -1,3 +1,4 @@
+import javax.print.attribute.standard.PageRanges;
 import java.util.Scanner;
 
 public class Main {
@@ -16,19 +17,22 @@ public class Main {
         double greatest = 0;
         double average = 0;
         double smallest = 0;
+
         //todo дописать логику программы ниже.
-
-
-
-
-
-
+        greatest = first > second && first > third ? first : second > first && second > third ? second : third;
+        smallest = first < second && first < third ? first : second < first && second < third ? second : third;
+        if (first > second && first < third || first > third && first < second) {
+            average = first;
+        } else if ((second > first && second < third) || (second > third && second < first)) {
+            average = second;
+        } else {
+            average = third;
+        }
 
         //todo
 
-
-        System.out.println("Наибольший вес: " + 10);
-        System.out.println("Средний вес: " + 9);
-        System.out.println("Наименьший вес: " + 1);
+        System.out.println("Наибольший вес: " + greatest);
+        System.out.println("Средний вес: " + average);
+        System.out.println("Наименьший вес: " + smallest);
     }
 }
