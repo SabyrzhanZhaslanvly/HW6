@@ -1,4 +1,3 @@
-import javax.print.attribute.standard.PageRanges;
 import java.util.Scanner;
 
 public class Main {
@@ -14,9 +13,9 @@ public class Main {
         System.out.println("Введите третий вес: ");
         double third = new Scanner(System.in).nextDouble();
 
-        double greatest = 0;
-        double average = 0;
-        double smallest = 0;
+        double greatest;
+        double average;
+        double smallest;
 
         //todo дописать логику программы ниже.
         greatest = first > second && first > third ? first : second > first && second > third ? second : third;
